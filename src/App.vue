@@ -132,6 +132,7 @@ i.fa-bars,
 i.fa-stream {
     color: #ededed;
     padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 input {
@@ -205,12 +206,12 @@ input {
 .nav_menu .hashtag_menu ul li {
     font-size: 1.2rem;
     font-family: system-ui;
-    font-weight: 600;
+    font-weight: bolder;
     color: white;
     transition: 0.3s;
     width: 100%;
     cursor: pointer;
-    padding: 0 1rem;
+    grid-gap: 1rem;
 }
 
 .nav_menu .hashtag_menu ul li:hover {

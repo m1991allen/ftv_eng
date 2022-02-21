@@ -53,8 +53,42 @@ export default {
 </script>
 
 <style scoped>
+/* 標題 */
+h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+} /* 內文大綱 */
+h3 {
+    font-size: 1.1rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+} /* 日期 */
+h4 {
+    font-size: 0.8rem;
+    margin-top: 1rem;
+}
+@media screen and (max-width: 500px) {
+    /* 標題 */
+    h2 {
+        font-size: 1rem;
+    } /* 內文大綱 */
+    h3 {
+        font-size: 0.8rem;
+    } /* 日期 */
+    h4 {
+        font-size: 0.6rem;
+    }
+}
+
 .grid {
     grid-template-columns: 1fr 2fr;
+    grid-gap: 1rem;
     margin: 1rem 1rem 3rem 1rem;
     cursor: pointer;
     border-bottom: 1px solid #e7e4eb;
@@ -65,39 +99,11 @@ export default {
     background-color: #fdfbff;
 }
 
-img {
-    width: 100%;
-}
-
-/* 標題 */
-h2 {
-    font-size: 1.4rem;
-    font-weight: bold;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1;
-    overflow: hidden;
-}
-
-/* 內文大綱 */
-h3 {
-    font-size: 1.1rem;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-}
-
-/* 日期 */
-h4 {
-    font-size: 0.8rem;
-}
-
 .news_info {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 0 1rem;
+    grid-gap: 1rem;
     width: 100%;
 }
 </style>

@@ -60,10 +60,51 @@ export default {
 </script>
 
 <style scoped>
+/* 標題 */
+h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+/* 內文大綱 */
+h3 {
+    font-size: 1.1rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+/* 日期 */
+h4 {
+    font-size: 0.8rem;
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 500px) {
+    /* 標題 */
+    h2 {
+        font-size: 1rem;
+    }
+
+    /* 內文大綱 */
+    h3 {
+        font-size: 0.8rem;
+    }
+
+    /* 日期 */
+    h4 {
+        font-size: 0.6rem;
+    }
+}
+
 .grid {
     grid-template-columns: 1fr 1fr;
     grid-gap: 2rem;
-    margin: 1rem 1rem 3rem 1rem;
     cursor: pointer;
     border-bottom: 1px solid #e7e4eb;
     transition: 0.3s;
@@ -75,31 +116,24 @@ export default {
     }
 }
 
+.grid .news_info:nth-child(1) {
+    background-color: #ffffff;
+    padding: 1rem;
+}
+
 .grid .news_info:nth-child(2) {
     background-color: #fcf7ff;
     padding: 1rem;
 }
+
+.grid .news_info:nth-child(2) h2 {
+    margin-bottom: 1rem;
+}
 .news_detail {
-    margin: 1rem 1rem 3rem 1rem;
+    margin: 4rem 1rem;
 }
 
-/* Title */
-h2#news_title,
-h2#news_title_tw {
-    font-size: 2rem;
-    padding: 1rem 0;
-}
-
-h4#news_date {
-    text-align: right;
-}
-
-/* summary */
-p#news_summary,
-p#news_content,
-p#news_summary_tw,
-p#news_content_tw {
-    font-size: 1.1rem;
-    padding: 1rem 0;
+p {
+    padding: 0.8rem 0;
 }
 </style>

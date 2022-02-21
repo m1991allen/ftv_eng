@@ -52,8 +52,8 @@ export default {
 }
 
 h2 {
-    font-size: 1.6rem;
-    font-weight: 600;
+    font-size: 1.2rem;
+    font-weight: bolder;
     padding: 1rem 0;
     text-align: center;
 }
@@ -67,7 +67,7 @@ ul.news_info li {
     font-size: 1.2rem;
     font-weight: bold;
     padding: 1rem;
-    list-style-type: auto;
+    list-style-type: decimal;
     cursor: pointer;
     transition: 0.3s;
 }

@@ -11,6 +11,7 @@
                 <p>經歷：{{ anchor.exp }}</p>
                 <p>嗜好：{{ anchor.hab }}</p>
             </div>
+            <hr />
         </div>
     </div>
 </template>
@@ -74,7 +75,15 @@ export default {
 .grid {
     display: grid;
     grid-template-columns: 2fr 3fr;
-    padding: 1rem;
+    grid-gap: 1rem;
+    margin: 4rem 1rem;
+}
+
+@media screen and (max-width: 500px) {
+    .grid {
+        grid-template-columns: 1fr;
+        margin: 3rem 0;
+    }
 }
 
 .grid:nth-child(even) .anc_info {
@@ -85,7 +94,6 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 0 1rem;
 }
 
 .grid .anc_info p:nth-child(1) {
