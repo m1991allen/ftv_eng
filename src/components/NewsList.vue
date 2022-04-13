@@ -74,6 +74,7 @@ h4 {
     font-size: 0.8rem;
     margin-top: 1rem;
 }
+
 @media screen and (max-width: 500px) {
     /* 標題 */
     h2 {
@@ -90,7 +91,7 @@ h4 {
 .grid {
     grid-template-columns: 1fr 2fr;
     grid-gap: 1rem;
-    margin: 4rem 1rem;
+    margin: 1rem 1rem 4rem;
     cursor: pointer;
     border-bottom: 1px solid #e7e4eb;
     transition: 0.3s;

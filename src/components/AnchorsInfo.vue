@@ -76,7 +76,7 @@ export default {
     display: grid;
     grid-template-columns: 2fr 3fr;
     grid-gap: 1rem;
-    margin: 4rem 1rem;
+    margin: 2rem 1rem;
 }
 
 @media screen and (max-width: 500px) {
@@ -88,6 +88,7 @@ export default {
 
 .grid:nth-child(even) .anc_info {
     background-color: #f9fbff;
+    padding: 0 1rem;
 }
 
 .grid .anc_info {

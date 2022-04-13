@@ -6,14 +6,26 @@
         <div class="grid">
             <div class="news_info" v-show="news_detail != null">
                 <h2 id="news_title"></h2>
-                <h4><i class="fad fa-lg fa-history"></i> <span id="news_date"></span></h4>
+                <h3><i class="fad fa-lg fa-history"></i> <span id="news_date"></span></h3>
                 <p id="news_summary"></p>
                 <p id="news_content" v-html="news_detail.content"></p>
             </div>
             <div class="news_info" v-show="news_detail != null">
                 <h2 id="news_title_tw"></h2>
+                <h3><i class="fad fa-lg fa-history"></i> <span id="news_date_tw"></span></h3>
                 <p id="news_summary_tw"></p>
                 <p id="news_content_tw" v-html="news_detail.content_tw"></p>
+            </div>
+        </div>
+        <div class="grid_icon">
+            <div>
+                <i class="fa-brands fa-2x fa-facebook-square"></i>
+            </div>
+            <div>
+                <i class="fa-brands fa-2x fa-twitter-square"></i>
+            </div>
+            <div>
+                <i class="fa-brands fa-2x fa-line"></i>
             </div>
         </div>
     </div>
@@ -49,6 +61,7 @@ export default {
 
             // 中文
             document.querySelector('#news_title_tw').innerHTML = this.news_detail[0].title_tw
+            document.querySelector('#news_date_tw').innerHTML = this.news_detail[0].date
             document.querySelector('#news_summary_tw').innerHTML = this.news_detail[0].summary_tw
             document.querySelector('#news_content_tw').innerHTML = this.news_detail[0].content_tw
         },
@@ -70,17 +83,8 @@ h2 {
     overflow: hidden;
 }
 
-/* 內文大綱 */
-h3 {
-    font-size: 1.1rem;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-}
-
 /* 日期 */
-h4 {
+h3 {
     font-size: 0.8rem;
     margin-top: 1rem;
 }
@@ -135,5 +139,22 @@ h4 {
 
 p {
     padding: 0.8rem 0;
+}
+
+.grid_icon {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 300px;
+    margin: 3rem auto;
+    text-align: center;
+}
+.grid_icon .fa-facebook-square {
+    color: #1877f2;
+}
+.grid_icon .fa-twitter-square {
+    color: #1da1f2;
+}
+.grid_icon .fa-line {
+    color: #00c300;
 }
 </style>

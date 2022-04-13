@@ -18,7 +18,7 @@ export default {
 h1 {
     font-size: 1.8rem;
     color: white;
-    background-image: linear-gradient(to top, #4d3a60, #aa84d1);
+    background-image: linear-gradient(to top, #275174, #4a8abe);
     padding: 3% 0;
 }
 </style>

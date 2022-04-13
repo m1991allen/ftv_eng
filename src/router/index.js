@@ -13,26 +13,85 @@ const routes = [
         path: '/',
         name: 'Home',
         component: Home,
+        meta: {
+            breadcrumb: [
+                {
+                    name: 'Home',
+                },
+            ],
+        },
     },
     {
         path: '/anchor',
         name: 'Anchor',
         component: Anchor,
+        meta: {
+            breadcrumb: [
+                {
+                    name: 'Home',
+                    link: '/',
+                },
+                {
+                    name: 'Anchor',
+                },
+            ],
+        },
     },
     {
         path: '/category',
         name: 'Category',
         component: Category,
+        meta: {
+            breadcrumb: [
+                {
+                    name: 'Home',
+                    link: '/',
+                },
+                {
+                    name: 'Category',
+                    link: '/category',
+                },
+                {
+                    name: 'All',
+                },
+            ],
+        },
     },
     {
         path: '/news',
         name: 'News',
         component: News,
+        meta: {
+            breadcrumb: [
+                {
+                    name: 'Home',
+                    link: '/',
+                },
+                {
+                    name: 'News',
+                    link: '/news',
+                },
+                {
+                    name: '{{Id}}',
+                },
+            ],
+        },
     },
     {
         path: '/search',
         name: 'Search',
         component: Search,
+        meta: {
+            breadcrumb: [
+                {
+                    name: 'Home',
+                    link: '/',
+                },
+                {
+                    name: 'Search',
+                },
+            ],
+        },
     },
 ]
 

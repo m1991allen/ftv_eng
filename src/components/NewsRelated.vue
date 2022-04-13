@@ -1,5 +1,6 @@
 <template>
     <div @click="link">
+        <p>Related News</p>
         <div class="grid" v-for="(item, index) of news" :key="index">
             <div class="news_photo">
                 <img src="../assets/test.jpg" alt="" />
@@ -72,6 +73,17 @@ h3 {
 h4 {
     font-size: 0.8rem;
     margin-top: 1rem;
+}
+
+p {
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: white;
+    padding: 0.5rem 1rem;
+    background-color: #275174;
+    border: 1px solid;
+    display: inline-block;
 }
 @media screen and (max-width: 500px) {
     /* 標題 */

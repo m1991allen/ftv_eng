@@ -5,7 +5,7 @@
         <div class="searchbar_layout">
             <div class="section searchbar_menu">
                 <input id="search" type="text" placeholder=" Searching..." />
-                <button><i class="fas fa-search"></i></button>
+                <button @click="searchHandler"><i class="fas fa-search"></i></button>
             </div>
         </div>
 
@@ -16,7 +16,7 @@
                 <div class="hashtag_menu">
                     <ul>
                         <li
-                            v-for="(tag, index) of hashtags"
+                            v-for="(tag, index) of getHashtags()"
                             :key="index"
                             @click="addActiveHandler(tag)"
                             class="list"
@@ -27,6 +27,7 @@
                     </ul>
                 </div>
             </nav>
+
             <div id="nav" class="section" v-show="isShow">
                 <router-link to="/">Home</router-link> | <router-link to="/anchor">Anchors</router-link> |
                 <router-link to="/category">Category</router-link> | <router-link to="/news">News</router-link> |
@@ -53,8 +54,6 @@ export default {
         return {
             isShow: false,
             isActive: false,
-            hashtags: ['International', 'Politics', 'Society', 'Sports', 'Business', 'Life', 'entertainment'],
-            counter: 0,
         }
     },
     methods: {
@@ -70,6 +69,23 @@ export default {
                 list[i].classList.remove('selected')
             }
             tagName.classList.add('selected')
+
+            this.$store.state.hashtag = tagName.innerHTML
+        },
+
+        getHashtags() {
+            return this.$store.state.hashtags
+        },
+
+        searchHandler() {
+            let searchString = document.querySelector('#search').value
+            this.$store.state.search = searchString
+        },
+    },
+
+    computed: {
+        getBreadcrumb() {
+            return this.$store.state.breadcrumb
         },
     },
 
@@ -109,7 +125,7 @@ export default {
 .section {
     max-width: 1240px;
     margin: auto;
-    padding: 3rem 0.5rem 1rem;
+    padding: 2rem 0.5rem 1rem;
     text-align: left;
     align-items: center;
 }
@@ -143,7 +159,7 @@ input {
 }
 
 .searchbar_layout {
-    background-color: #4d3a60;
+    background-color: #275174;
 }
 
 .searchbar_menu {
@@ -167,7 +183,7 @@ input {
 }
 
 .searchbar_menu button:hover {
-    background-color: #4c385f;
+    background-color: #275174;
 }
 
 /* Hashtag style */
@@ -176,7 +192,6 @@ input {
     display: grid;
     grid-template-columns: 1fr 9fr;
     background-color: #0f1627;
-    box-shadow: 1px 5px 5px #bbbac4;
 }
 
 .nav_menu .hashtag_menu {
@@ -216,12 +231,11 @@ input {
 
 .nav_menu .hashtag_menu ul li:hover {
     transform: translateY(-3px);
-    background-color: #4c385f;
-    border-radius: 100px;
+    background-color: #275174;
 }
 
 .selected {
-    background-color: #4c385f;
+    background-color: #275174;
 }
 
 .sticky {
@@ -233,7 +247,7 @@ input {
 
 .sticky_nav {
     position: fixed;
-    top: 96px;
+    top: 88px;
     width: 100%;
     z-index: 999;
 }

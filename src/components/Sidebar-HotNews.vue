@@ -24,7 +24,6 @@ export default {
                 .get(`https://www.ftvnews.com.tw/API/engNews.json`)
                 .then((res) => {
                     let news = res.data.Data[0].hotNews
-                    console.log(news)
                     news.forEach((item) => {
                         this.news.push(item)
                     })

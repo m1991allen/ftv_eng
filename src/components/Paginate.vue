@@ -70,10 +70,10 @@ export default {
 }
 
 .active {
-    background-color: #4c385f;
+    background-color: #275174;
 }
 
 .active:hover {
-    background-color: #4c385f !important;
+    background-color: #275174 !important;
 }
 </style>

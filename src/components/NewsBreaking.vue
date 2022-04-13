@@ -10,7 +10,7 @@
                 officia rerum blanditiis quas veniam iste beatae repudiandae libero corporis, cupiditate nihil debitis
                 laborum! Quam?
             </h3>
-            <h4>time:21/01/20</h4>
+            <h4>Time：21/01/20</h4>
         </div>
     </div>
 </template>
@@ -31,7 +31,7 @@ export default {
 <style scoped>
 /* 標題 */
 h2 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: bold;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -41,7 +41,7 @@ h2 {
 
 /* 內文大綱 */
 h3 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
@@ -50,7 +50,7 @@ h3 {
 
 /* 日期 */
 h4 {
-    font-size: 0.8rem;
+    font-size: 1rem;
     margin-top: 1rem;
 }
 
@@ -74,7 +74,7 @@ h4 {
 .grid {
     grid-template-columns: 1fr 2fr;
     grid-gap: 1rem;
-    margin: 4rem 1rem 1rem;
+    margin: 1rem 1rem 4rem;
     cursor: pointer;
     transition: 0.3s;
 }
