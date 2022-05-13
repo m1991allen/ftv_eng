@@ -5,6 +5,7 @@ import Anchor from '../views/Anchor.vue'
 import Category from '../views/Category.vue'
 import News from '../views/News.vue'
 import Search from '../views/Search.vue'
+import Error from '../views/Error.vue'
 
 Vue.use(VueRouter)
 
@@ -89,6 +90,22 @@ const routes = [
                 },
                 {
                     name: 'Search',
+                },
+            ],
+        },
+    },
+    {
+        path: '/error',
+        name: 'Error',
+        component: Error,
+        meta: {
+            breadcrumb: [
+                {
+                    name: 'Home',
+                    link: '/',
+                },
+                {
+                    name: 'Error',
                 },
             ],
         },
